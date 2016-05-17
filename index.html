@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+	<head>
+		<title>Veronika's teahouse</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div class="wrapper style1">
+
+				<!-- Header -->
+					<div id="header" class="skel-panels-fixed">
+						<div id="logo">
+							<h1><a href="about.html">Veronika's teahouse</a></h1>
+							<span class="tag">by Veronika Inc.</span>
+						</div>
+						<nav id="nav">
+							<ul>
+								<li class="active"><a href="Trueteas.html">True 
+								Tea</a>
+								<ul class="dropdown">
+                <li><a href="Black.html"><strong>Black Teas</strong></a></li>
+                <li><a href="Green.html"><strong>Green Teas</strong></a></li>
+                <li><a href="Oolong.html"><strong>Oolong</strong></a></li>
+                <li><a href="White.html"><strong>White Teas</strong></a></li>
+            					</ul>
+								</li>
+								<li><a href="rooibos.html">Rooibos</a></li>
+								<li><a href="mate.html">Mate</a></li>
+								<li><a href="herbal.html">Herbal</a></li>
+							</ul>
+						</nav>
+					</div>
+
+				<!-- Banner -->
+					<div id="banner" class="container">
+						<section>
+							<p>“Take some more tea," the March Hare said to Alice, very earnestly.
+"I've had nothing yet," Alice replied in an offended tone, "so I can't take more."
+"You mean you can't take less," said the Hatter: "it's very easy to take more than nothing."
+</p>
+		<a href="quotes.html" class="button medium">Read More Quotes</a>
+				<p>Welcome to the official website of our teahouse and the online shop. Scroll down and choose your favourite tea.</p>
+							<a href="about.html" class="button medium">Learn about Us</a>
+						</section>
+					</div>
+
+				<!-- Extra -->
+					<div id="extra">
+						<div class="container">
+							<div class="row no-collapse-1">
+								<section class="4u"> <a href="herbal.html" class="image featured"><img src="images/pic01.jpg" alt=""></a>
+									<div class="box">
+										<p>HERBAL infusions have been used as a medicine since ancient times..</p>
+										<a href="herbal.html" class="button">Read More</a> </div>
+								</section>
+								<section class="4u"> <a href="rooibos.html" class="image featured"><img src="images/pic02.jpg" alt=""></a>
+									<div class="box">
+										<p>ROOIBOS or red tea presents the ultimate mixture of sweetness and benefits for health... </p>
+										<a href="rooibos.html" class="button">Read More</a> </div>
+								</section>
+								<section class="4u"> <a href="Green.html" class="image featured"><img src="images/pic03.jpg" alt=""></a>
+									<div class="box">
+										<p>GREEN tea is a must at every Japanese tea ceremony..</p>
+										<a href="Green.html" class="button">Read More</a> </div>
+								</section>
+							</div>
+							<div class="row no-collapse-1">
+								<section class="4u"> <a href="mate.html" class="image featured"><img src="images/pic5.jpg" alt=""></a>
+									<div class="box">
+										<p>MATE offers smoky taste enjoyed from a specialised cup - a gourd..</p>
+										<a href="mate.html" class="button">Read More</a> </div>
+								</section>
+								<section class="4u"> <a href="Black.html" class="image featured"><img src="images/pic06.jpg" alt=""></a>
+									<div class="box">
+										<p>BLACK TEA was due to never-leaving, 
+										strong taste used as a barter currency in Asia... </p>
+										<a href="Black.html" class="button">Read More</a> </div>
+								</section>
+								<section class="4u"> <a href="Oolong.html" class="image featured"><img src="images/pic07.jpg" alt=""></a>
+									<div class="box">
+										<p>OOLONG represents the mid-way in choosing black or green tea, with complexity of black and freshness of green...</p>
+										<a href="Oolong.html" class="button">Read More</a> </div>
+								</section>
+							</div>
+						</div>
+					</div>
+
+				
+	<!-- Footer -->
+		<div id="footer" class="wrapper style2">
+			<div class="container">
+			<?php
+//if "email" variable is filled out, send email
+  if (isset($_REQUEST['email']))  {
+  
+  //Email information
+  $admin_email = "someone@example.com";
+  $email = $_REQUEST['email'];
+  $subject = $_REQUEST['subject'];
+  $comment = $_REQUEST['comment'];
+  
+  //send email
+  mail($admin_email, "$subject", $comment, "From:" . $email);
+  
+  //Email response
+  echo "Thank you for contacting us!";
+  }
+  
+  //if "email" variable is not filled out, display the form
+  else  {
+?>
+ 
+				<section>
+					<header class="major">
+						<h2>ORDER</h2>
+						<span class="byline">Please send us your order by email below. Do not forget to write your address.</span>
+					</header>
+					<form method="post" action="thank_you.htm">
+						<div class="row half">
+							<div class="12u">
+								<input class="text" type="text" name="name" id="name" placeholder="Name" />
+							</div>
+						</div>
+						<div class="row half">
+							<div class="12u">
+								<input class="text" type="text" name="email" id="email" placeholder="Email" />
+							</div>
+						</div>
+						<div class="row half">
+							<div class="12u">
+								<textarea name="message" id="message" placeholder="Message"></textarea>
+							</div>
+						</div>
+						<div class="row half">
+							<div class="12u">
+								<ul class="actions">
+									<li>
+										<input type="submit" value="Send Message" class="button alt" />
+									</li>
+								</ul>
+							</div>
+						</div>
+					</form>
+				</section>
+			</div>
+		</div>
+
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				<div class="copyright">
+					<p>
+					<i style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-variant: normal; letter-spacing: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; font-family: proxima-nova, 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial, sans-serif; font-size: 24.96px; font-weight: normal; line-height: 34.944px; text-align: start;">
+					Copyright © 2016 Veronika Inc. All rights reserved.</i></p>
+										</ul>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
